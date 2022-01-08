@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --mode=production",
-    "dist": "swa start dist",
-    "dev": "(vue-cli-service build --mode=development) & swa start dist --api-location api",
-    "production": "(vue-cli-service build --mode=production) & swa start dist --api-location api",
-    "proxy": "(vue-cli-service serve) & (vue-cli-service build) & swa start http://localhost:8080"
+    "build": "vue-cli-service build",
+    "start-dist": "swa start dist",
+    "start-dev": "(vue-cli-service build --mode=development) & swa start dist --api-location api",
+    "start-prod": "(vue-cli-service build --mode=production) & swa start dist --api-location api",
+    "start-proxy": "(vue-cli-service serve) & (vue-cli-service build) & swa start http://localhost:8080"
   },
   "dependencies": {
     "core-js": "^3.6.5",
