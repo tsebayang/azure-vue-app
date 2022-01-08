@@ -16,7 +16,7 @@ export default createStore({
   },
   actions: {
     async asyncAddCounter({ commit }) {
-      await setTimeout((product) => {
+      setTimeout((product) => {
         commit("addCounter");
       }, 500);
     },
