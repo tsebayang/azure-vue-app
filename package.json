@@ -8,7 +8,7 @@
     "dist": "swa start dist",
     "dev": "(vue-cli-service build --mode=development) & swa start dist --api-location api",
     "production": "(vue-cli-service build --mode=production) & swa start dist --api-location api",
-    "proxy": "(vue-cli-service serve) & (vue-cli-service build) & swa start http://localhost:8080 --api-location api"
+    "proxy": "(vue-cli-service serve) & (vue-cli-service build) & swa start http://localhost:8080"
   },
   "dependencies": {
     "core-js": "^3.6.5",

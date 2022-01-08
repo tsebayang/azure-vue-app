@@ -23,8 +23,8 @@ export default createStore({
       }
     },
     getUserDetails(state) {
-      return state.userDetails
-    }
+      return state.userDetails;
+    },
   },
   mutations: {
     addCounter(state) {
@@ -35,7 +35,6 @@ export default createStore({
         state.userDetails = payload.userDetails;
         state.userId = payload.userId;
         state.userRole = payload.userRoles;
-     
       } catch (error) {
         console.log(error);
       }
@@ -48,7 +47,7 @@ export default createStore({
       }, 500);
     },
     async asyncLoadUser({ commit }) {
-      let { clientPrincipal } = await fetch("/.auth/me").json();
+      let { clientPrincipal } = await (await fetch("/.auth/me")).json();
       commit("setUser", clientPrincipal);
     },
   },

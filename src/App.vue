@@ -5,16 +5,16 @@
 
 <script>
 import Navigation from "./components/Navigation.vue";
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 export default {
   setup() {
     const store = useStore();
-
+    store.dispatch("asyncLoadUser");
+    
     return {
       getUserDetails: computed(() => store.getters.getUserDetails),
       // addCounter: () => store.commit("addCounter"),
-      // asyncAddCounter: () => store.dispatch("asyncAddCounter"),
     };
   },
   components: {
