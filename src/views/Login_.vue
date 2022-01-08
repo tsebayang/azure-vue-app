@@ -2,9 +2,9 @@
   <div class="center">
     <h1>CLV-IT-APP-001</h1>
     <h2>Login:</h2>
-    <a href="">
+    <a href="/.auth/login/aad">
       <button>
-        <img src="../assets/logo.png" />
+        <img src="../assets/aad_logo.png" />
         Azure Active Directory
       </button>
     </a>
@@ -38,8 +38,10 @@ button {
   margin-top: 2rem;
 
   img {
-    width: 1.5rem;
+    width: 1.25rem;
+    height: 20px;
     margin-right: 0.5rem;
+    vertical-align: bottom;
   }
 }
 

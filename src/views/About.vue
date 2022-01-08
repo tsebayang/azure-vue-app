@@ -1,8 +1,8 @@
 <template>
   <div class="about">
-    <h1>{{ getUser }}</h1>
+    <h1>{{ getCounter }}</h1>
     <button @click="addCounter">Add</button>
-    <button @click="asyncLoadUser">Add Async</button>
+    <button @click="asyncAddCounter">Add Async</button>
   </div>
 </template>
 
@@ -15,9 +15,9 @@ export default {
 
     return {
       counter: computed(() => store.state.counter),
-      getUser: computed(() => store.getters.getUser),
+      getCounter: computed(() => store.getters.getCounter),
       addCounter: () => store.commit("addCounter"),
-      asyncLoadUser: () => store.dispatch("asyncLoadUser"),
+      asyncAddCounter: () => store.dispatch("asyncAddCounter"),
     };
   },
 };

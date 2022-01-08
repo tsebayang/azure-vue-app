@@ -1,11 +1,22 @@
 <template>
-  <Navigation />
+  <Navigation :userDetails="getUserDetails" />
   <router-view />
 </template>
 
 <script>
 import Navigation from "./components/Navigation.vue";
+import { computed } from "vue";
+import { useStore } from "vuex";
 export default {
+  setup() {
+    const store = useStore();
+
+    return {
+      getUserDetails: computed(() => store.getters.getUserDetails),
+      // addCounter: () => store.commit("addCounter"),
+      // asyncAddCounter: () => store.dispatch("asyncAddCounter"),
+    };
+  },
   components: {
     Navigation,
   },
